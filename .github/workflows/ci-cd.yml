@@ -39,7 +39,7 @@ jobs:
           path: build
 
   deploy:
-    if: ${{ github.ref == 'refs/heads/mains' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - build
     runs-on: ubuntu-latest

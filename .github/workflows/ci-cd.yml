@@ -2,12 +2,17 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ["20.x"]
 
     steps:
       - name: Checkout code
@@ -16,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "20"
+          node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
         run: npm install
@@ -26,6 +31,24 @@ jobs:
 
       - name: Create .nojekyll file
         run: touch docs/.nojekyll
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/mains' }}
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -1,0 +1,14 @@
+<p-panel>
+    <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+            <span class="font-bold">
+                My Skills
+            </span>
+        </div>
+    </ng-template>
+    <div *ngFor="let skill of skills">
+        <p class="font-bold">{{skill.category}}</p>
+        <p>{{skill.description}}</p>
+        <p-divider />
+    </div>
+</p-panel>

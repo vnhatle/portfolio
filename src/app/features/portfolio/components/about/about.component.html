@@ -1,0 +1,45 @@
+<p-panel>
+    <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+            <span class="font-bold">
+                Introduction
+            </span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <div class="flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="flex align-items-center gap-2">
+                <span *ngFor="let link of links">
+                    <a [href]="link.link" target="_blank" rel="noopener noreferrer"
+                        class="p-button p-component p-button-text no-underline" [title]="link.description">
+                        <span class="p-button-icon {{link.icon}}"></span>
+                        <span *ngIf="link.index === 3" class="p-button-text ml-1">{{link.description}}</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </ng-template>
+    <div class="grid">
+        <div class="col-9">
+            <p>
+                I am a software engineer specializing in enterprise applications. Throughout my career, I have gained
+                extensive
+                experience in developing and delivering innovative solutions across diverse domains, including
+                enterprise
+                systems, e-commerce, fintech, and biometric authentication.
+            </p>
+            <p>
+                With over 8 years of professional experience in the IT industry, I possess a strong background in both
+                backend
+                and frontend development using SpringBoot, Angular, ReactJS, and VueJS. I am passionate about designing,
+                coding,
+                testing, and troubleshooting applications, building architectures, deploying with CI/CD, and leveraging
+                new
+                technologies to drive innovation and efficiency.
+            </p>
+        </div>
+        <div class="col-3">
+            <p-image src="images/profile_picture.jpeg" alt="Profile" width="250" [preview]="true" />
+        </div>
+    </div>
+</p-panel>

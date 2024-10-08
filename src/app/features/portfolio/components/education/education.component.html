@@ -1,0 +1,24 @@
+<p-panel>
+    <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+            <span class="font-bold">
+                Education
+            </span>
+        </div>
+    </ng-template>
+    <div>
+        <div *ngFor="let school of schools">
+            <div class="flex">
+                <div class="mt-2 mr-2">
+                    <p-avatar [image]="school.icon" shape="circle" />
+                </div>
+                <div>
+                    <p class="font-bold">{{school.name}}</p>
+                    <p>{{school.program}}</p>
+                    <p>{{school.time}}</p>
+                </div>
+            </div>
+            <p-divider />
+        </div>
+    </div>
+</p-panel>

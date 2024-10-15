@@ -19,6 +19,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { AvatarModule } from 'primeng/avatar';
 import { DialogModule } from 'primeng/dialog';
 import { TagModule } from 'primeng/tag';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 const routes: Routes = [{ path: '', component: PortfolioComponent }];
 
@@ -46,6 +47,7 @@ const routes: Routes = [{ path: '', component: PortfolioComponent }];
     AvatarModule,
     DialogModule,
     TagModule,
+    NgxExtendedPdfViewerModule,
   ],
 })
 export class PortfolioModule {}

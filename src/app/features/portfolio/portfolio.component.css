@@ -1,0 +1,7 @@
+.no-border .ui-panel .ui-panel-content {
+  border: none;
+}
+
+.no-border .ui-panel .ui-panel-header {
+  border: none;
+}

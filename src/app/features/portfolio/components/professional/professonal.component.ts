@@ -34,7 +34,7 @@ export class ProfessionalComponent implements OnInit {
         jobPosition: 'Software Engineer',
         time: 'Oct 2015 - Jun 2018 · 2 yrs 9 mos',
         address: '326 Vo Van Kiet, Co Giang Ward, District 1, HCM City',
-        icon: 'images/company-icons/transcosmos_technologic_arts_logo.jfif',
+        icon: 'assets/images/company-icons/transcosmos_technologic_arts_logo.jfif',
         color: '#9C27B0',
         shortDescription:
           'Trancosmos Technologic Arts (TTV) is a Japanese agile software development and offshore company founded in 2014. Operating primarily in Vietnam and the Asia-Pacific region, TTV offers services such as software development, product development, web design, and mobile app development. TTV emphasizes agile methodology, a highly skilled team, and continuous improvement.',
@@ -67,7 +67,7 @@ export class ProfessionalComponent implements OnInit {
         time: 'Jul 2018 - Apr 2021 · 2 yrs 10 mos',
         address:
           '36 Tran Quoc Toan, Hai Chau 1 Ward, Hai Chau District, Da Nang City',
-        icon: 'images/company-icons/mti_danang_logo.jfif',
+        icon: 'assets/images/company-icons/mti_danang_logo.jfif',
         color: '#673AB7',
         shortDescription:
           'MTI Technology, founded in 2016, specializes in digital transformation solutions using Agile and Lean methodologies. The company offers consulting services and AI-powered solutions to enhance efficiency and effectiveness.',
@@ -105,7 +105,7 @@ export class ProfessionalComponent implements OnInit {
         jobPosition: 'Senior Fullstack Developer',
         time: 'May 2021 - May 2024 · 3 yrs 1 mo',
         address: '364 Cong Hoa, Ward 13, Tan Binh District, Ho Chi Minh City',
-        icon: 'images/company-icons/bouygues_construction_it_vietnam_logo.jfif',
+        icon: 'assets/images/company-icons/bouygues_construction_it_vietnam_logo.jfif',
         color: '#FF9800',
         shortDescription:
           'Bouygues Construction IT Vietnam (BYCN IT VN) is the IT branch of Bouygues Construction, a global leader in the building, civil works, energy, and services sectors. Established to provide high-quality IT services, BYCN IT VN focuses on software development, system monitoring, security, and user support. Located in Ho Chi Minh City, Vietnam, BYCN IT VN aims to enhance the competitiveness and drive the digital transformation of the Bouygues Construction Group.',
@@ -134,7 +134,7 @@ export class ProfessionalComponent implements OnInit {
         jobPosition: "Master's Degree",
         time: 'May 2024 - Present',
         address: '1000 N 4th St, Fairfield, IA 52557',
-        icon: 'images/company-icons/bouygues_construction_it_vietnam_logo.jfif',
+        icon: 'assets/images/company-icons/bouygues_construction_it_vietnam_logo.jfif',
         color: '#FF9800',
         shortDescription:
           "Pursuing Master's Degree in Computer Science at Maharishi International University",

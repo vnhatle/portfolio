@@ -1,4 +1,4 @@
-<p-panel>
+<p-panel class="no-border">
     <ng-template pTemplate="header">
         <div class="flex align-items-center gap-2">
             <span class="font-bold">
@@ -10,10 +10,14 @@
         <div class="flex flex-wrap align-items-center justify-content-between gap-3">
             <div class="flex align-items-center gap-2">
                 <span *ngFor="let link of links">
-                    <a [href]="link.link" target="_blank" rel="noopener noreferrer"
+                    <a *ngIf="link.index !== 3" [href]="link.link" target="_blank" rel="noopener noreferrer"
                         class="p-button p-component p-button-text no-underline" [title]="link.description">
                         <span class="p-button-icon {{link.icon}}"></span>
-                        <span *ngIf="link.index === 3" class="p-button-text ml-1">{{link.description}}</span>
+                    </a>
+                    <a *ngIf="link.index === 3" (click)="showPdfViewer($event)" rel="noopener noreferrer"
+                        class="p-button p-component p-button-text no-underline" [title]="link.description">
+                        <span class="p-button-icon {{link.icon}}"></span>
+                        <span class="p-button-text ml-1">{{link.description}}</span>
                     </a>
                 </span>
             </div>
@@ -39,7 +43,17 @@
             </p>
         </div>
         <div class="col-3">
-            <p-image src="images/profile_picture.jpeg" alt="Profile" width="250" [preview]="true" />
+            <p-image src="assets/images/profile_picture.jpeg" alt="Profile" width="250" [preview]="true" />
         </div>
     </div>
 </p-panel>
+
+<p-dialog *ngIf="isShowPdfViewer" header="Resume" [modal]="true" [(visible)]="isShowPdfViewer"
+    [style]="{ width: '80rem' }" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+    <p-panel>
+        <div class="pdf-viewer-container">
+            <ngx-extended-pdf-viewer [src]="'assets/resume/Resume_VanNhatLe.pdf'" [textLayer]="true">
+            </ngx-extended-pdf-viewer>
+        </div>
+    </p-panel>
+</p-dialog>

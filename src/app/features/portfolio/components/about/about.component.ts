@@ -5,6 +5,7 @@ interface LinkItem {
   link?: string;
   icon?: string;
   description?: string;
+  onclick?: Function;
 }
 
 @Component({
@@ -14,6 +15,7 @@ interface LinkItem {
 })
 export class AboutComponent implements OnInit {
   links: LinkItem[];
+  isShowPdfViewer: boolean = false;
 
   constructor() {
     this.links = [
@@ -45,4 +47,13 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  showPdfViewer(event: Event): void {
+    event.preventDefault();
+    this.isShowPdfViewer = true;
+  }
+
+  onError(event: any): void {
+    console.error('Error loading PDF:', event);
+  }
 }

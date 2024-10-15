@@ -26,7 +26,7 @@ export class EducationComponent implements OnInit {
         time: 'Sep 2010 - Sep 2015',
         address:
           '54 Nguyen Luong Bang St, Lien Chieu District, Da Nang City, Viet Nam',
-        icon: 'images/school-icons/danang_university_of_science_and_technology_logo.jfif',
+        icon: 'assets/images/school-icons/danang_university_of_science_and_technology_logo.jfif',
       },
       {
         index: 1,
@@ -34,7 +34,7 @@ export class EducationComponent implements OnInit {
         program: "Master's degree, Computer Science",
         time: 'Apr 2024 - Present',
         address: '1000 N 4th St, Fairfield, IA 52557',
-        icon: 'images/school-icons/maharishi_international_university_logo.jfif',
+        icon: 'assets/images/school-icons/maharishi_international_university_logo.jfif',
       },
     ];
   }

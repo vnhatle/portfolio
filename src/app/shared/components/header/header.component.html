@@ -1,8 +1,11 @@
-<p-menubar [model]="items">
+<p-menubar [model]="items" class="centered-menubar">
     <ng-template pTemplate="start">
+        <a pRipple class="flex align-items-center p-menuitem-link" (click)="scrollTo('introduction')">
+            <span class="logo ml-2">V-NHATLE</span>
+        </a>
     </ng-template>
     <ng-template pTemplate="item" let-item let-root="root">
-        <a pRipple class="flex align-items-center p-menuitem-link">
+        <a pRipple class="flex align-items-center p-menuitem-link" (click)="scrollTo(item.link)">
             <span [class]="item.icon"></span>
             <span class="ml-2">{{ item.label }}</span>
         </a>

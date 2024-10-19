@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
-import { AboutComponent } from './components/about/about.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EducationComponent } from './components/education/education.component';
-import { ProfessionalComponent } from './components/professional/professonal.component';
-import { TechnicalComponent } from './components/technical/technical.component';
 import { CommonModule } from '@angular/common';
 import { PanelModule } from 'primeng/panel';
 import { PortfolioComponent } from './portfolio.component';
@@ -20,16 +18,18 @@ import { AvatarModule } from 'primeng/avatar';
 import { DialogModule } from 'primeng/dialog';
 import { TagModule } from 'primeng/tag';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { TechnicalSkillsComponent } from './components/technical-skills/technical-skills.component';
+import { ProfessionalExperienceComponent } from './components/professional-experience/professional-experience.component';
 
 const routes: Routes = [{ path: '', component: PortfolioComponent }];
 
 @NgModule({
   declarations: [
-    AboutComponent,
+    IntroductionComponent,
     ContactComponent,
     EducationComponent,
-    ProfessionalComponent,
-    TechnicalComponent,
+    TechnicalSkillsComponent,
+    ProfessionalExperienceComponent,
     PortfolioComponent,
   ],
   imports: [

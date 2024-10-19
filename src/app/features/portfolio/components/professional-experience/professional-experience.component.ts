@@ -14,11 +14,11 @@ interface EventItem {
 }
 
 @Component({
-  selector: 'app-professional',
-  templateUrl: './professional.component.html',
-  styleUrls: ['./professional.component.css'],
+  selector: 'app-professional-experience',
+  templateUrl: './professional-experience.component.html',
+  styleUrls: ['./professional-experience.component.css'],
 })
-export class ProfessionalComponent implements OnInit {
+export class ProfessionalExperienceComponent implements OnInit {
   events: EventItem[];
 
   isShowMore: boolean = false;

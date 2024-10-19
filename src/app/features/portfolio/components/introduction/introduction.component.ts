@@ -9,11 +9,11 @@ interface LinkItem {
 }
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  selector: 'app-introduction',
+  templateUrl: './introduction.component.html',
+  styleUrls: ['./introduction.component.css'],
 })
-export class AboutComponent implements OnInit {
+export class IntroductionComponent implements OnInit {
   links: LinkItem[];
   isShowPdfViewer: boolean = false;
 

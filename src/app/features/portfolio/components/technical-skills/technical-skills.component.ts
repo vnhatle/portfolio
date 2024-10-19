@@ -7,11 +7,11 @@ interface SkillItem {
 }
 
 @Component({
-  selector: 'app-technical',
-  templateUrl: './technical.component.html',
-  styleUrls: ['./technical.component.css'],
+  selector: 'app-technical-skills',
+  templateUrl: './technical-skills.component.html',
+  styleUrls: ['./technical-skills.component.css'],
 })
-export class TechnicalComponent implements OnInit {
+export class TechnicalSkillsComponent implements OnInit {
   skills: SkillItem[];
 
   constructor() {

@@ -1,10 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css'],
 })
-export class PortfolioComponent implements OnInit {
-  ngOnInit(): void {}
+export class PortfolioComponent implements AfterViewInit {
+  constructor(private route: ActivatedRoute) {}
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe((fragment: string | null) => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  }
 }

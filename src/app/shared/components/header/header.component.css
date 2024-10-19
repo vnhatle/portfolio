@@ -1,0 +1,13 @@
+.logo {
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.centered-menubar .p-menubar {
+  display: flex !important;
+  justify-content: center !important;
+  -webkit-text-stroke-width: thin !important;
+}
